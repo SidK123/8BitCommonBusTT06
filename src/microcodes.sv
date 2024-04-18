@@ -93,7 +93,7 @@ module microcodes(
       end
      ARITH_OP_6: begin
         nState            = ARITH_OP_7;
-        data_bus_sel      = ALU;
+        data_bus_sel      = ALU_BUS;
         pc_load_en        = 1'b0;
         ir_load_en        = 1'b0;
         rf_write_read     = 1'b1;
