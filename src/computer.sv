@@ -29,7 +29,7 @@ module tt_um_EightBitCommonBusCPU (
   logic        imm_instruction;
   logic [3:0]  opcode;
   assign       opcode = (instruction_register[3:0]);
-  assign       imm_instruction = (opcode == ADDI);
+  assign       imm_instruction = (opcode == 4'd1);
 
   logic [7:0]  data_bus;
   data_bus_t   data_bus_sel;
