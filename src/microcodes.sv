@@ -42,7 +42,12 @@ module microcodes(
         sel_field_load_en = 1'b1;
       end
       ARITH_OP_2: begin
-        nState            = imm_instruction ? ARITH_OP_3A : ARITH_OP_3;
+        if(imm_instruction) begin
+          nState = ARITH_OP_3A;
+        end
+        else begin
+          nState = ARITH_OP_3;
+        end
         data_bus_sel      = RF;
         pc_load_en        = 1'b0;
         ir_load_en        = 1'b0;
